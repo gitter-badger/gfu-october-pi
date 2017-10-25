@@ -1,0 +1,6 @@
+<pi-led [led]="led" *ngIf="led; else loader"></pi-led>
+<ng-template #loader>
+  <p>
+    I am loading <span class="fa fa-refresh fa-spin"></span>
+  </p>
+</ng-template>

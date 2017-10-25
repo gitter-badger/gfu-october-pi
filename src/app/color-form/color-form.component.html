@@ -1,0 +1,29 @@
+<form #myForm="ngForm" (ngSubmit)="setColor(myForm.value)">
+  <div class="field">
+    <label class="label">Color</label>
+    <div class="control has-icons-left has-icons-right">
+      <input [(ngModel)]="color" name="color" #myColor="ngModel" required minlength="3" class="input is-success" type="text">
+      <span class="icon is-small is-left">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="icon is-small is-right">
+        <i class="fa" [ngClass]="{'fa-check': myColor.valid, 'fa-warning': myColor.invalid}"></i>
+      </span>
+    </div>
+    <p class="help is-danger" *ngIf="myColor.hasError('required')">
+      This field is required!
+    </p>
+    <p class="help is-danger" *ngIf="myColor.errors?.minlength">
+      Please enter at least 3 characters!
+    </p>
+    <pre><code>{{ myColor.errors | json }}</code></pre>
+  </div>
+  <div class="field is-grouped">
+    <div class="control">
+      <button type="submit" [disabled]="myForm.invalid" class="button is-link">Submit</button>
+    </div>
+    <div class="control">
+      <button type="reset" class="button is-text">Cancel</button>
+    </div>
+  </div>
+</form>

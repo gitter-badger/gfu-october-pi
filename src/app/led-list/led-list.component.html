@@ -1,0 +1,13 @@
+<p>
+  led-list works! <a [routerLink]="'/leds/178'">Bad Link</a>
+</p>
+<table class="table">
+  <tbody>
+    <tr>
+      <td *ngFor="let l of leds">
+        <a [routerLink]=" ['/leds', l.index] ">Details</a>
+        <pi-led [led]="l" (ledClick)="updateColor($event)"></pi-led>
+      </td>
+    </tr>
+  </tbody>
+</table>

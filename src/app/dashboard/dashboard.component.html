@@ -1,0 +1,9 @@
+<div class="columns">
+  <div class="column is-one-quarter">
+    <pi-color-form (colorChange)="list.setColors($event)"></pi-color-form>
+  </div>
+  <div class="column">
+    <pi-led-list #list></pi-led-list>
+    <pi-action-bar (refresh)="list.loadColors()"></pi-action-bar>
+  </div>
+</div>
