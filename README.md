@@ -1,5 +1,7 @@
 # GfuOctoberPi
 
+[![Join the chat at https://gitter.im/Xampany/gfu-october-pi](https://badges.gitter.im/Xampany/gfu-october-pi.svg)](https://gitter.im/Xampany/gfu-october-pi?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
 
 ## Development server
